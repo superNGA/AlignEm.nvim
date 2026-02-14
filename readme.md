@@ -1,9 +1,12 @@
 <h1 align=center>AlignEm.nvim</h1>
-<p align=center><i>AlignEm.nvim is a simple tool to help you align stuff in your code quickly and easily</i></p>
+
+<p align="center">
+  <i>A lightweight Neovim plugin for quickly aligning code using multiple cursors</i>
+</p>
 
 https://github.com/user-attachments/assets/98634c50-8011-4a8a-96a9-c1d132c1efcf
 
-Imagine if nvim-multi-visual and easy-align had a baby and the baby immediately suffered a head injury then that baby would be AlignEm.nvim. 
+AlignEm.nvim provides a simple way to place multiple cursors and align text across lines, inspired by the convenience of multiple-cursor selections and easy-align functionality.
 
 ### How to use
 Lazy
@@ -14,9 +17,19 @@ Lazy
 Setup
 ```
 local AlignEm = require("AlignEm")
+
 AlignEm.setup()
-vim.keymap.set('n', "<Esc>", function() AlignEm.RemoveAllCursors() end) -- to remove cursors
-vim.keymap.set('n', "<C-0>", function() AlignEm.AddCursor()        end) -- to add cursors
-vim.keymap.set('n', "<C-m>", function() AlignEm.AlignAllCursors()  end) -- Align all cursors
+
+-- Recommended keymaps
+vim.keymap.set("n", "<Esc>", AlignEm.RemoveAllCursors, { desc = "AlignEm: Remove all cursors" })
+vim.keymap.set("n", "<C-0>", AlignEm.AddCursor,        { desc = "AlignEm: Add cursor" })
+vim.keymap.set("n", "<C-m>", AlignEm.AlignAllCursors,  { desc = "AlignEm: Align all cursors" })
 ```
-Change keybinds
+
+### Usage
+
+- Switch to Normal mode
+- Place the cursor on the desired line and press <C-0> to add an alignment cursor.
+- Use normal Noevim motions to move all plugins at once.
+- Press <C-m> to align all marked cursors.
+- Press <Esc> to clear all alignment cursors when finished.

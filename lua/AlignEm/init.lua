@@ -52,9 +52,6 @@ local HandleCmd = function()
 
     bSimulating = true
 
-    print("Hanlding command")
-
-
     -- original row & col
     local iOriginalPos = vim.api.nvim_win_get_cursor(0)
 
