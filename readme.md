@@ -1,7 +1,7 @@
 <h1 align=center>AlignEm.nvim</h1>
 <p align=center><i>AlignEm.nvim is a simple tool to help you align stuff in your code quickly and easily</i></p>
 
-https://github.com/user-attachments/assets/6938b0b9-19a3-41a6-97fb-5ac6a6459c0a
+[![Demo](https://img.youtube.com/vi/tRqi3N1gP7U/0.jpg)](https://www.youtube.com/watch?v=tRqi3N1gP7U)
 
 Imagine if nvim-multi-visual and easy-align had a baby and the baby immediately suffered a head injury then that baby would be AlignEm.nvim. 
 
